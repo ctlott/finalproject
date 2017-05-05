@@ -1,2 +1,4 @@
 #BlueJ class context
-numComments=0
+comment0.params=e\ h\ s\ n
+comment0.target=People(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+numComments=1
