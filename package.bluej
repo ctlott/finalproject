@@ -1,11 +1,14 @@
 #BlueJ package file
+dependency1.from=Question
+dependency1.to=People
+dependency1.type=UsesDependency
 objectbench.height=76
 objectbench.width=658
 package.editor.height=400
 package.editor.width=560
 package.editor.x=192
 package.editor.y=38
-package.numDependencies=0
+package.numDependencies=1
 package.numTargets=3
 package.showExtends=true
 package.showUses=true
@@ -29,8 +32,8 @@ target1.x=70
 target1.y=10
 target2.editor.height=700
 target2.editor.width=900
-target2.editor.x=232
-target2.editor.y=58
+target2.editor.x=485
+target2.editor.y=32
 target2.height=50
 target2.name=Question
 target2.naviview.expanded=false
