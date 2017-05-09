@@ -1,2 +1,18 @@
 #BlueJ class context
-numComments=0
+comment0.params=array
+comment0.target=Question(People[][])
+comment1.params=
+comment1.target=int\ gradYear()
+comment2.params=
+comment2.target=int\ hairColor()
+comment3.params=
+comment3.target=int\ eyeColor()
+comment4.params=
+comment4.target=int\ shirtColor()
+comment5.params=
+comment5.target=int\ gender()
+comment6.params=
+comment6.target=int\ ethnicity()
+comment7.params=
+comment7.target=int\ hasGlasses()
+numComments=8
