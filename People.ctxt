@@ -1,4 +1,16 @@
 #BlueJ class context
-comment0.params=e\ h\ s\ n
-comment0.target=People(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
-numComments=1
+comment0.params=gY\ hC\ sC\ gen\ e\ gla
+comment0.target=People(int,\ int,\ int,\ int,\ int,\ int)
+comment1.params=
+comment1.target=int\ getGradYear()
+comment2.params=
+comment2.target=int\ getHairColor()
+comment3.params=
+comment3.target=int\ getShirtColor()
+comment4.params=
+comment4.target=int\ getGender()
+comment5.params=
+comment5.target=int\ getEthnicity()
+comment6.params=
+comment6.target=int\ getGlasses()
+numComments=7
