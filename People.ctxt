@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=gY\ hC\ sC\ gen\ e\ gla
-comment0.target=People(int,\ int,\ int,\ int,\ int,\ int)
+comment0.params=gY\ hC\ sC\ gen\ e\ gla\ posX\ posY
+comment0.target=People(int,\ int,\ int,\ int,\ int,\ int,\ int,\ int)
 comment1.params=
 comment1.target=int\ getGradYear()
 comment2.params=
