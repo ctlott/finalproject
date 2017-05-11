@@ -19,7 +19,8 @@ public class Question
        3. Shirt Color
        4. Gender 
        5. Ethnicity
-       6. Has Glasses*/);
+       6. Has Glasses
+       7. Guess Who!*/);
        
        System.out.print("Enter an integer for the attribute you want to guess about from the menu above: ");
        attribute = Keyboard.nextInt();
@@ -36,7 +37,9 @@ public class Question
        else if (attribute == 5)
             returnfinal = guessEthnicity();     
        else if (attribute == 6)
-            returnfinal = guessGlasses();     
+            returnfinal = guessGlasses();   
+       else if (attribute == 7)
+            returnfinal = guessWho();  
        else {
             System.out.println("Invalid entry");
             returnfinal = false;
@@ -104,6 +107,16 @@ public class Question
            choice = Keyboard.nextInt();
            System.out.println();
            if (peopleArray[personIndex].getGlasses() == choice)
+                truefalse = true;
+           else
+                truefalse = false;
+           return truefalse;
+        }
+   public boolean guessWho(){
+           System.out.print("Enter the name you want to guess: ");
+           String str = Keyboard.next();
+           System.out.println();
+           if (peopleArray[personIndex].getName() == str)
                 truefalse = true;
            else
                 truefalse = false;

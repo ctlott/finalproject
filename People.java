@@ -1,13 +1,23 @@
+
 import java.awt.*;
-import java.awt.Mouselistener;
+import java.awt.event.*;
+import javax.swing.*;
 import java.util.*;
 
-public class People implements MouseListener
+public class People extends JFrame
 {
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
+    private String name;
+    private JPanel mousepanel;
+    private JLabel statusbar;
     //private picture;
     
-    public People(int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY){
+    public People(){
+    
+    }
+    
+    public People(String n, int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY){
+        name = n;
         gradYear = gY;
         hairColor = hC;
         shirtColor = sC;
@@ -16,6 +26,7 @@ public class People implements MouseListener
         glasses = gla;
         x = posX;
         y = posY;
+        
     }
     
     
@@ -36,6 +47,9 @@ public class People implements MouseListener
     }
     public int getGlasses(){
         return this.glasses;
+    }
+    public String getName(){
+        return this.name;
     }
     
     public void mouseClicked(MouseEvent e){

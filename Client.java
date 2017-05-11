@@ -5,7 +5,7 @@ import java.util.*;
 public class Client
 {
     public static void main (String[] args){
-        Player[] players = new Player[2]
+        Player[] players = new Player[2];
         
         System.out.println("Player 1! Choose whom you would like Player 2 to guess.");
         
