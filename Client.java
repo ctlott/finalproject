@@ -9,15 +9,13 @@ public class Client
         
         System.out.println("Player 1! Choose whom you would like Player 2 to guess.");
         
-        
-        players[0] = new Player(makeList(), null, 
     }
     
     
-    static People[][] makeList(){
+    public static People[][] makeList(){
         People[][] board = new People[4][6];
-        board[0][0] = new People(
-        board[0][1] = new People(
+        board[0][0] = new People("Phillip", 2017, 3, 2, 1, 2, 2, 0, 0);
+        board[0][1] = new People("Jack", 2018, 2, 3, 1, 2, 1, 0, 1);
         board[0][2] = new People(
         board[0][3] = new People(
         board[0][4] = new People(

@@ -8,12 +8,18 @@ public class People extends JFrame
 {
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
     private String name;
+<<<<<<< HEAD
     private JPanel mousepanel;
     //private picture;
     
     public People(){
         
     }
+=======
+
+    //private picture;
+
+>>>>>>> origin/master
     
     public People(String n, int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY){
         name = n;
