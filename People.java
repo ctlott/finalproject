@@ -9,11 +9,10 @@ public class People extends JFrame
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
     private String name;
     private JPanel mousepanel;
-    private JLabel statusbar;
     //private picture;
     
     public People(){
-    
+        
     }
     
     public People(String n, int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY){
@@ -27,6 +26,13 @@ public class People extends JFrame
         x = posX;
         y = posY;
         
+        mousepanel = new JPanel();
+        
+        add(mousepanel, BorderLayout.CENTER);
+        
+        Clicker click = new Clicker();
+        
+        mousepanel.addMouseListener(click);
     }
     
     
@@ -52,14 +58,20 @@ public class People extends JFrame
         return this.name;
     }
     
-    public void mouseClicked(MouseEvent e){
+    private class Clicker implements MouseListener
+    {
+        public Clicker(){
+            
+        }
         
+        public void mouseClicked(MouseEvent e){
+            
+        }
+        
+        public void mouseEntered(MouseEvent e){}
+        public void mouseExited(MouseEvent e){}
+        public void mousePressed(MouseEvent e){}
+        public void mouseReleased(MouseEvent e){}
     }
-    
-    public void mouseEntered(MouseEvent e){}
-    public void mouseExited(MouseEvent e){}
-    public void mousePressed(MouseEvent e){}
-    public void mouseReleased(MouseEvent e){}
-    
     
 }
