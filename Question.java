@@ -70,9 +70,11 @@ public class Question
            return truefalse;
         }
    public boolean guessShirtColor(){       
-           System.out.println(/*1. blah 
-           2. blah 
-           3. blah*/);
+           System.out.println(/*1. Red
+           2. Blue
+           3. Black
+           4. Grey
+           5. Pattern*/);
            System.out.print("Enter an integer for the shirt color you want to guess: ");
            choice = Keyboard.nextInt();
            System.out.println();
