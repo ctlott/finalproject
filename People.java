@@ -4,12 +4,11 @@ import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
 
-public class People extends JFrame
+public class People extends JPanel
 {
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
     private String name;
 
-    private JPanel mousepanel;
     //private picture;
     
     public People(){
@@ -22,6 +21,7 @@ public class People extends JFrame
 
     
     public People(String n, int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY){
+        //variables
         name = n;
         gradYear = gY;
         hairColor = hC;
@@ -32,13 +32,15 @@ public class People extends JFrame
         x = posX;
         y = posY;
         
-        mousepanel = new JPanel();
+        //clicker stuff
+        //mousepanel = new JPanel();
+        setBackground(Color.WHITE);
         
-        add(mousepanel, BorderLayout.CENTER);
+        //add(mousepanel, BorderLayout.CENTER);
         
         Clicker click = new Clicker();
         
-        mousepanel.addMouseListener(click);
+        addMouseListener(click);
     }
     
     
