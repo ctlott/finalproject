@@ -1,4 +1,6 @@
 #BlueJ class context
 comment0.params=myBoard\ mine\ number
 comment0.target=Player(People[][],\ People,\ int)
-numComments=1
+comment1.params=
+comment1.target=People\ getChosenOne()
+numComments=2
