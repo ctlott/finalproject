@@ -1,10 +1,13 @@
-
+import java.awt.image.*;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.*;
+import java.io.*;
+import javax.imageio.ImageIO;
 
-public class People extends JPanel
+
+public class People extends JPanel 
 {
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
     private String name;
@@ -20,7 +23,7 @@ public class People extends JPanel
 
 
     
-    public People(String n, int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY){
+    public People(String n, int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY) throws IOException {
         //variables
         name = n;
         gradYear = gY;
@@ -41,6 +44,31 @@ public class People extends JPanel
         Clicker click = new Clicker();
         
         addMouseListener(click);
+        
+        
+        
+        JFrame frame = buildFrame();
+
+        final BufferedImage image = ImageIO.read(new File("Pics\\Alexa.jpg"));
+
+        JPanel pane = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(image, 0, 0, null);
+            }
+        };
+
+
+        frame.add(pane);
+    }
+    
+    private static JFrame buildFrame() {
+        JFrame frame = new JFrame();
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setSize(200, 200);
+        frame.setVisible(true);
+        return frame;
     }
     
     
