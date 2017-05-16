@@ -12,7 +12,22 @@ public class Tester
         JFrame frame = new JFrame("Test");
         
         People test = new People("Phillip", 2017, 3, 2, 1, 2, 2, 0, 0);
-        frame.getContentPane().add(test);
+        
+
+        final BufferedImage image = ImageIO.read(new File("Pics\\Alexa.jpg"));
+
+        JPanel pane = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(image, 0, 0, null);
+            }
+        };
+
+
+        frame.add(pane);
+        
+        //frame.getContentPane().add(test);
         frame.pack();
         frame.setVisible(true);
         

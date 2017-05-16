@@ -47,20 +47,7 @@ public class People extends JPanel
         
         
         
-        JFrame frame = buildFrame();
-
-        final BufferedImage image = ImageIO.read(new File("Pics\\Alexa.jpg"));
-
-        JPanel pane = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.drawImage(image, 0, 0, null);
-            }
-        };
-
-
-        frame.add(pane);
+        
     }
     
     private static JFrame buildFrame() {
