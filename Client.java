@@ -1,6 +1,10 @@
-
-import java.awt.Color;
+import java.awt.image.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
 import java.util.*;
+import java.io.*;
+import javax.imageio.ImageIO;
 
 public class Client
 {
@@ -12,32 +16,32 @@ public class Client
     }
     
     //name, gradYear, hairColor, shirtColor, gender, ethnicity, glasses, posX, posY
-    public static People[][] makeList(){
+    public static People[][] makeList() throws IOException{
         People[][] board = new People[4][6];
-        board[0][0] = new People("Phillip", 2017, 3, 2, 1, 2, 2, 0, 0);
-        board[0][1] = new People("Jack", 2018, 2, 3, 1, 2, 1, 0, 1);
-        board[0][2] = new People("Neha", 2018, 1, 3, 2, 1, 1, 0, 2);
-        board[0][3] = new People("Justin", 2019, 3, 3, 1, 2, 1, 0, 3);
-        board[0][4] = new People("Maggie", 2019, 2, 3, 2, 2, 2, 0, 4);
-        board[0][5] = new People("Alex", 2018, 1, 3, 1, 2, 2, 0, 5);
-        board[1][0] = new People("Elizabeth", 2018, 4, 4, 2, 2, 2, 1, 0);
-        board[1][1] = new People("David", 2017, 4, 2, 1, 2, 2, 1, 1);
-        board[1][2] = new People("Jeevan", 2017, 1, 1, 1, 1, 1, 1, 2);
-        board[1][3] = new People("Claire", 2018, 1, 5, 2, 1, 1, 1, 3);
-        board[1][4] = new People("Alexa", 2019, 2, 4, 2, 2, 2, 1, 4);
-        board[1][5] = new People("Caroline", 2018, 3, 5, 2, 2, 2, 1, 5);
-        board[2][0] = new People("Aayush", 2019, 1, 1, 1, 1, 1, 2, 0);
-        board[2][1] = new People("Jim", 2019, 4, 1, 1, 2, 2, 2, 1);
-        board[2][2] = new People("Justas", 2019, 1, 4, 1, 2, 1, 2, 2);
-        board[2][3] = new People("Griffin", 2018, 2, 3, 1, 2, 2, 2, 3);
-        board[2][4] = new People("Hayden", 2017, 3, 5, 1, 2, 2, 2, 4);
-        board[2][5] = new People("Ham", 2017, 1, 5, 1, 1, 2, 2, 5);
-        board[3][0] = new People("Ed", 2017, 2, 1, 1, 2, 2, 3, 0);
-        board[3][1] = new People("Nick", 2017, 2, 4, 1, 2, 2, 3, 1);
-        board[3][2] = new People("Abhishek", 2019, 1, 4, 1, 1, 1, 3, 2);
-        board[3][3] = new People("Tanner", 2018, 2, 1, 1, 2, 2, 3, 3);
-        board[3][4] = new People("Sam", 2018, 3, 1, 1, 2, 2, 3, 4);
-        board[3][5] = new People("Emile", 2019, 2, 1, 1, 2, 2, 3, 5);
+        board[0][0] = new People("Phillip", "Pics//Phillip.jpg", 2017, 3, 2, 1, 2, 2, 5, 5);
+        board[0][1] = new People("Jack", "Pics//Jack.jpg", 2018, 2, 3, 1, 2, 1, 173, 5);
+        board[0][2] = new People("Neha", "Pics//Neha.jpg", 2018, 1, 3, 2, 1, 1, 341, 5);
+        board[0][3] = new People("Justin", "Pics//Justin.jpg", 2019, 3, 3, 1, 2, 1, 509, 5);
+        board[0][4] = new People("Maggie", "Pics//Maggie.jpg", 2019, 2, 3, 2, 2, 2, 677, 5);
+        board[0][5] = new People("Alex", "Pics//Alex.jpg", 2018, 1, 3, 1, 2, 2, 845, 5);
+        board[1][0] = new People("Elizabeth", "Pics//Elizabeth.jpg", 2018, 4, 4, 2, 2, 2, 5, 228);
+        board[1][1] = new People("David", "Pics//David.jpg", 2017, 4, 2, 1, 2, 2, 173, 228);
+        board[1][2] = new People("Jeevan", "Pics//Jeevan.jpg", 2017, 1, 1, 1, 1, 1, 341, 228);
+        board[1][3] = new People("Claire", "Pics//Claire.jpg", 2018, 1, 5, 2, 1, 1, 509, 228);
+        board[1][4] = new People("Alexa", "Pics//Alexa.jpg", 2019, 2, 4, 2, 2, 2, 677, 228);
+        board[1][5] = new People("Caroline", "Pics//Caroline.jpg", 2018, 3, 5, 2, 2, 2, 845, 228);
+        board[2][0] = new People("Aayush", "Pics//Aayush.jpg", 2019, 1, 1, 1, 1, 1, 5, 451);
+        board[2][1] = new People("Jim", "Pics//Jim.jpg", 2019, 4, 1, 1, 2, 2, 173, 451);
+        board[2][2] = new People("Justas", "Pics//Justas.jpg", 2019, 1, 4, 1, 2, 1, 341, 451);
+        board[2][3] = new People("Griffin", "Pics//Griffin.jpg", 2018, 2, 3, 1, 2, 2, 509, 451);
+        board[2][4] = new People("Hayden", "Pics//Hayden.jpg", 2017, 3, 5, 1, 2, 2, 677, 451);
+        board[2][5] = new People("Ham", "Pics//Ham.jpg", 2017, 1, 5, 1, 1, 2, 845, 451);
+        board[3][0] = new People("Ed", "Pics//Ed.jpg", 2017, 2, 1, 1, 2, 2, 5, 674);
+        board[3][1] = new People("Nick", "Pics//Nick.jpg", 2017, 2, 4, 1, 2, 2, 173, 674);
+        board[3][2] = new People("Abhishek", "Pics//Abhishek.jpg", 2019, 1, 4, 1, 1, 1, 341, 674);
+        board[3][3] = new People("Tanner", "Pics//Tanner.jpg", 2018, 2, 1, 1, 2, 2, 509, 674);
+        board[3][4] = new People("Sam", "Pics//Sam.jpg", 2018, 3, 1, 1, 2, 2, 677, 674);
+        board[3][5] = new People("Emile", "Pics//Emile.jpg", 2019, 2, 1, 1, 2, 2, 845, 674);
         return board;
     }
 }

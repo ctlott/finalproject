@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 public class People extends JPanel 
 {
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
-    private String name;
+    private String name, fileName;
 
     //private picture;
     
@@ -23,7 +23,7 @@ public class People extends JPanel
 
 
     
-    public People(String n, int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY) throws IOException {
+    public People(String n, String file, int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY) throws IOException {
         //variables
         name = n;
         gradYear = gY;
@@ -34,6 +34,7 @@ public class People extends JPanel
         glasses = gla;
         x = posX;
         y = posY;
+        file = fileName;
         
         //clicker stuff
         //mousepanel = new JPanel();
