@@ -34,7 +34,7 @@ public class People extends JPanel
         glasses = gla;
         x = posX;
         y = posY;
-        file = fileName;
+        fileName = file;
         
         //clicker stuff
         //mousepanel = new JPanel();
@@ -80,6 +80,9 @@ public class People extends JPanel
     }
     public String getName(){
         return this.name;
+    }
+    public String getFileName(){
+        return this.fileName;
     }
     
     private class Clicker implements MouseListener
