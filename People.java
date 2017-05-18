@@ -10,8 +10,9 @@ import javax.imageio.ImageIO;
 public class People extends JPanel 
 {
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
-    private String name, fileName;
+    public String name, fileName;
     public BufferedImage image;
+    public static int length = 124, width =166;
 
     //private picture;
     
@@ -86,6 +87,12 @@ public class People extends JPanel
     }
     public String getFileName(){
         return this.fileName;
+    }
+    public int getXLocation(){
+        return x;
+    }
+    public int getYLocation(){
+        return y;
     }
     public BufferedImage getImage(){
         return this.image;
