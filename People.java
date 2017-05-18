@@ -95,6 +95,16 @@ public class People extends JPanel
     public BufferedImage getImage(){
         return this.image;
     }
+    public int getLength(){
+        return length;
+    }
+    public int getWidth(){
+        return width;
+    }
+    
+    public String toString(){
+        return fileName;
+    }
     
     
     private class Clicker implements MouseListener

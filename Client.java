@@ -8,8 +8,14 @@ import javax.imageio.ImageIO;
 
 public class Client extends JPanel implements MouseListener
 {
-    public static void main (String[] args){
+    public static void main (String[] args) throws IOException {
         Player[] players = new Player[2];
+        
+        People[][] b = makeList();
+        
+        System.out.println(b[0][0]);
+        
+        display(b);
         
         System.out.println("Player 1! Choose whom you would like Player 2 to guess.");
         
@@ -45,7 +51,7 @@ public class Client extends JPanel implements MouseListener
         return board;
     }
     
-    private People loopImages(int x, int y, People[][] board){
+    private static People loopImages(int x, int y, People[][] board){
         for(int i = 0; i < board.length; i++){
             if(board[i][0].getYLocation() >= y && board[i][0].getYLocation() + board[i][0].getLength() <= y){
                 for(int j = 0; j < board[i].length; j++){
@@ -55,11 +61,31 @@ public class Client extends JPanel implements MouseListener
                 }
             }
         }
+        return null;
     }
     
     public void mouseClicked(MouseEvent e){
-        int x = e.getLocationOnScreen().getX();
-        int y = e.getLocationOnScreen().getY();
+        int x = (int)e.getLocationOnScreen().getX();
+        int y = (int)e.getLocationOnScreen().getY();
+    }
+    
+    public static void display(People[][] board) throws IOException {
+        JFrame frame = new JFrame("Test");
+        JPanel pane = new JPanel(){
+        protected void displayBoard(Graphics g) throws IOException {
+            super.paintComponent(g);
+            for (People[] p: board){
+                for (People pp: p){
+                    BufferedImage image  = ImageIO.read( new File( pp.getFileName() ) );
+                    g.drawImage(image, pp.getXLocation(), pp.getYLocation(), null);
+                }
+            }
+        }
+        };
+        frame.add(pane);
+        
+        frame.pack();
+        frame.setVisible(true);
     }
         
     public void mouseEntered(MouseEvent e){}
