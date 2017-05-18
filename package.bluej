@@ -63,6 +63,7 @@ target2.x=30
 target2.y=150
 target3.editor.height=744
 <<<<<<< HEAD
+<<<<<<< HEAD
 target3.editor.width=1382
 target3.editor.x=-8
 target3.editor.y=-8
@@ -71,6 +72,11 @@ target3.editor.width=858
 target3.editor.x=439
 target3.editor.y=0
 >>>>>>> origin/master
+=======
+target3.editor.width=758
+target3.editor.x=478
+target3.editor.y=74
+>>>>>>> parent of 8a39f75...  q2 frae
 target3.height=50
 target3.name=People
 target3.naviview.expanded=false
