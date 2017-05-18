@@ -10,7 +10,9 @@ import javax.imageio.ImageIO;
 public class People extends JPanel 
 {
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
-    private String name, fileName;
+    public String name, fileName;
+    public BufferedImage image;
+    public static int length = 124, width =166;
 
     //private picture;
     
@@ -34,7 +36,9 @@ public class People extends JPanel
         glasses = gla;
         x = posX;
         y = posY;
-        file = fileName;
+        fileName = file;
+        
+        image  = ImageIO.read( new File(file) );
         
         //clicker stuff
         //mousepanel = new JPanel();
@@ -58,8 +62,6 @@ public class People extends JPanel
         frame.setVisible(true);
         return frame;
     }
-    
-    
     public int getGradYear(){
         return this.gradYear;
     }
@@ -81,6 +83,19 @@ public class People extends JPanel
     public String getName(){
         return this.name;
     }
+    public String getFileName(){
+        return this.fileName;
+    }
+    public int getXLocation(){
+        return x;
+    }
+    public int getYLocation(){
+        return y;
+    }
+    public BufferedImage getImage(){
+        return this.image;
+    }
+    
     
     private class Clicker implements MouseListener
     {
