@@ -22,7 +22,7 @@ public class Tester
         People test6 = new People("Alex", "Pics//Alex.jpg", 2018, 1, 3, 1, 2, 2, 845, 5);
         
 
-        final BufferedImage image  = ImageIO.read(new File(test.getFileName()));
+        //final BufferedImage image  = ImageIO.read(new File(test.getFileName()));
         final BufferedImage image2 = ImageIO.read(new File(test2.getFileName()));
         final BufferedImage image3 = ImageIO.read(new File(test3.getFileName()));
         final BufferedImage image4 = ImageIO.read(new File(test4.getFileName()));
@@ -33,7 +33,7 @@ public class Tester
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                g.drawImage(image, 5, 5, null);
+                g.drawImage(test.getImage(), 5, 5, null);
                 g.drawImage(image2, 173, 5, null);
                 g.drawImage(image3, 341, 5, null);
                 g.drawImage(image4, 509, 5, null);

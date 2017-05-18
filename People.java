@@ -11,6 +11,7 @@ public class People extends JPanel
 {
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
     private String name, fileName;
+    public BufferedImage image;
 
     //private picture;
     
@@ -35,6 +36,8 @@ public class People extends JPanel
         x = posX;
         y = posY;
         fileName = file;
+        
+        image  = ImageIO.read( new File(file) );
         
         //clicker stuff
         //mousepanel = new JPanel();
@@ -84,6 +87,10 @@ public class People extends JPanel
     public String getFileName(){
         return this.fileName;
     }
+    public BufferedImage getImage(){
+        return this.image;
+    }
+    
     
     private class Clicker implements MouseListener
     {
