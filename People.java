@@ -62,8 +62,6 @@ public class People extends JPanel
         frame.setVisible(true);
         return frame;
     }
-    
-    
     public int getGradYear(){
         return this.gradYear;
     }

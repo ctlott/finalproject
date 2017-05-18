@@ -2,5 +2,7 @@
 comment0.params=myBoard\ mine\ number
 comment0.target=Player(People[][],\ People,\ int)
 comment1.params=
-comment1.target=People\ getChosenOne()
-numComments=2
+comment1.target=People[][]\ getBoard()
+comment2.params=
+comment2.target=People\ getChosenOne()
+numComments=3

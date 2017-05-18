@@ -7,16 +7,17 @@ import java.io.*;
 import javax.imageio.ImageIO;
 
 
-public class Graphics
+public class Graphicssss extends JPanel
 {
     public static void main(String[] args) throws IOException{
         JFrame frame = new JFrame("Test");
         JPanel pane = new JPanel(){
-        @Override
-        protected void displayBoard(Graphics g){
+        protected void displayBoard(Graphics g, People[][] board){
             super.paintComponent(g);
-            for (People p: this.getBoard()){
-                g.drawImage(p.getImage(), p.getXLocation, p.getYLocation, null);
+            for (People[] p: board){
+                for (People pp: p){
+                    g.drawImage(pp.getImage(), pp.getXLocation(), pp.getYLocation(), null);
+                }
             }
         }
 
