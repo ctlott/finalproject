@@ -13,8 +13,6 @@ public class Client extends JPanel implements MouseListener
         
         People[][] b = makeList();
         
-        System.out.println(b[0][0]);
-        
         SwingSandbox.main(b);
         
         System.out.println("Player 1! Choose whom you would like Player 2 to guess.");
