@@ -7,10 +7,19 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-public class SwingSandbox {
+import java.awt.image.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+import java.util.*;
+import java.io.*;
+import javax.imageio.ImageIO;
+
+public class SwingSandbox extends JPanel implements MouseListener {
 
     public static void main(People[][] board) throws IOException {
-        JFrame frame = new JFrame();
+        JFrame frame = new JFrame("Guess Who('s back bitches)");
+        frame.setSize(715, 900);
 
         BufferedImage image = ImageIO.read(new File("Pics\\Phillip.jpg"));
 
@@ -38,4 +47,21 @@ public class SwingSandbox {
         frame.pack();
         frame.setVisible(true);
     }
+    
+    public void mouseClicked(MouseEvent ee){
+        int x = (int)ee.getLocationOnScreen().getX();
+        int y = (int)ee.getLocationOnScreen().getY();
+        People person = null;
+        try {
+                        person = Client.loopImages( x, y, Client.makeList() );
+                    } catch (IOException e) {
+                    }
+        
+        System.out.println( person );
+    }
+    
+    public void mouseEntered(MouseEvent e){}
+    public void mouseExited(MouseEvent e){}
+    public void mousePressed(MouseEvent e){}
+    public void mouseReleased(MouseEvent e){}
 }

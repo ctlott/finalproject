@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=array\ person
-comment0.target=Question(People[],\ int)
+comment0.params=peeps
+comment0.target=Question(People)
 comment1.params=
 comment1.target=boolean\ guessGradYear()
 comment2.params=

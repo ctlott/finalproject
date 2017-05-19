@@ -3,17 +3,15 @@ import java.util.*;
 
 public class Question
 {
-   private People[] peopleArray = new People[24];
+   private People person;
    private int attribute;
    private int choice;
    private boolean returnfinal;
-   private int personIndex;
    private boolean truefalse;
    Scanner Keyboard = new Scanner(System.in);
    
-   public Question(People[] array, int person){
-       peopleArray = array;
-       personIndex = person;
+   public Question(People peeps){
+       person = peeps;
        System.out.println(/*1. Graduation Year
        2. Hair Color
        3. Shirt Color
@@ -49,7 +47,7 @@ public class Question
            System.out.print("Enter the graduation year you want to guess: ");
            choice = Keyboard.nextInt();
            System.out.println();
-           if (peopleArray[personIndex].getGradYear() == choice)
+           if (person.getGradYear() == choice)
                 truefalse = true;
            else
                 truefalse = false;
@@ -63,7 +61,7 @@ public class Question
            System.out.print("Enter an integer for the hair color you want to guess: ");
            choice = Keyboard.nextInt();
            System.out.println();
-           if (peopleArray[personIndex].getHairColor() == choice)
+           if (person.getHairColor() == choice)
                 truefalse = true;
            else
                 truefalse = false;
@@ -78,7 +76,7 @@ public class Question
            System.out.print("Enter an integer for the shirt color you want to guess: ");
            choice = Keyboard.nextInt();
            System.out.println();
-           if (peopleArray[personIndex].getShirtColor() == choice)
+           if (person.getShirtColor() == choice)
                 truefalse = true;
            else
                 truefalse = false;
@@ -88,7 +86,7 @@ public class Question
            System.out.print("Enter a 1 to guess boy, and a 2 to guess girl: ");
            choice = Keyboard.nextInt();
            System.out.println();
-           if (peopleArray[personIndex].getGender() == choice)
+           if (person.getGender() == choice)
                 truefalse = true;
            else
                 truefalse = false;
@@ -98,7 +96,7 @@ public class Question
            System.out.print("Enter a 1 to guess asian, and a 2 to guess white: ");
            choice = Keyboard.nextInt();
            System.out.println();
-           if (peopleArray[personIndex].getEthnicity() == choice)
+           if (person.getEthnicity() == choice)
                 truefalse = true;
            else
                 truefalse = false;
@@ -108,7 +106,7 @@ public class Question
            System.out.print("Enter a 1 to guess glasses, and a 2 to guess no glasses: ");
            choice = Keyboard.nextInt();
            System.out.println();
-           if (peopleArray[personIndex].getGlasses() == choice)
+           if (person.getGlasses() == choice)
                 truefalse = true;
            else
                 truefalse = false;
@@ -118,7 +116,7 @@ public class Question
            System.out.print("Enter the name you want to guess: ");
            String str = Keyboard.next();
            System.out.println();
-           if (peopleArray[personIndex].getName() == str)
+           if (person.getName() == str)
                 truefalse = true;
            else
                 truefalse = false;
