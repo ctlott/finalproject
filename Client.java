@@ -15,7 +15,7 @@ public class Client extends JPanel implements MouseListener
         
         System.out.println(b[0][0]);
         
-        display(b);
+        SwingSandbox.main(b);
         
         System.out.println("Player 1! Choose whom you would like Player 2 to guess.");
         
@@ -68,25 +68,29 @@ public class Client extends JPanel implements MouseListener
         int x = (int)e.getLocationOnScreen().getX();
         int y = (int)e.getLocationOnScreen().getY();
     }
-    
-    public static void display(People[][] board) throws IOException {
-        JFrame frame = new JFrame("Test");
-        JPanel pane = new JPanel(){
-        protected void displayBoard(Graphics g) throws IOException {
-            super.paintComponent(g);
-            for (People[] p: board){
-                for (People pp: p){
-                    BufferedImage image  = ImageIO.read( new File( pp.getFileName() ) );
-                    g.drawImage(image, pp.getXLocation(), pp.getYLocation(), null);
-                }
-            }
-        }
-        };
-        frame.add(pane);
-        
-        frame.pack();
-        frame.setVisible(true);
-    }
+//     
+//     public static void display(People[][] board) throws IOException {
+//         JFrame frame = new JFrame("Test");
+//         JPanel pane = new JPanel(){
+//         protected void displayBoard(Graphics g) throws IOException {
+//             super.paintComponent(g);
+//             for (People[] p: board){
+//                 for (People pp: p){
+//                     try {
+//                         BufferedImage image  = ImageIO.read( new File( pp.getFileName() ) );
+//                     } catch (IOException e) {
+//                     }
+//     
+//                     g.drawImage(image, pp.getXLocation(), pp.getYLocation(), null);
+//                 }
+//             }
+//         }
+//         };
+//         frame.add(pane);
+//         
+//         frame.pack();
+//         frame.setVisible(true);
+//     }
         
     public void mouseEntered(MouseEvent e){}
     public void mouseExited(MouseEvent e){}
