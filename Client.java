@@ -8,17 +8,31 @@ import javax.imageio.ImageIO;
 
 public class Client extends JPanel implements MouseListener
 {
+    private Player[] players;
+    
     public static void main (String[] args) throws IOException {
         Player[] players = new Player[2];
+        boolean win = false;
         
-        People[][] b = makeList();
+
+        players[0] = new Player(makeList(), 1);
+        System.out.println();
+        players[1] = new Player(makeList(), 2);
         
-        System.out.println(b[0][0]);
+        Player guesser = players[0];
         
-        SwingSandbox.main(b);
-        
-        System.out.println("Player 1! Choose whom you would like Player 2 to guess.");
-        
+        while(!win){
+            
+            
+            
+            
+            if(guesser == players[0]){
+                guesser = players[1];
+            }
+            else{
+                guesser = players[0];
+            }
+        }
     }
     
     //name, gradYear, hairColor, shirtColor, gender, ethnicity, glasses, posX, posY
@@ -51,7 +65,7 @@ public class Client extends JPanel implements MouseListener
         return board;
     }
     
-    private static People loopImages(int x, int y, People[][] board){
+    public static People loopImages(int x, int y, People[][] board){
         for(int i = 0; i < board.length; i++){
             if(board[i][0].getYLocation() >= y && board[i][0].getYLocation() + board[i][0].getLength() <= y){
                 for(int j = 0; j < board[i].length; j++){
@@ -64,9 +78,16 @@ public class Client extends JPanel implements MouseListener
         return null;
     }
     
-    public void mouseClicked(MouseEvent e){
-        int x = (int)e.getLocationOnScreen().getX();
-        int y = (int)e.getLocationOnScreen().getY();
+    public void mouseClicked(MouseEvent ee){
+        int x = (int)ee.getLocationOnScreen().getX();
+        int y = (int)ee.getLocationOnScreen().getY();
+        People person = null;
+        try {
+                        person = loopImages( x, y, makeList() );
+                    } catch (IOException e) {
+                    }
+        
+        System.out.println( person );
     }
 //     
 //     public static void display(People[][] board) throws IOException {
