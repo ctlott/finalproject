@@ -18,9 +18,10 @@ public class Player
         board = myBoard;
         guessedCorrectlyPlayer = false;
         System.out.println("Enter the name of a person you want your opponent to guess: ");
+        String choosen = Keyboard.next();
         for (int r = 0; r < myBoard.length; r++){
             for (int c = 0; c < myBoard.length; c++){
-                if (Keyboard.next() == myBoard[r][c].getName()){
+                if (choosen.equals( myBoard[r][c].getName())){
                     chosenOne = myBoard[r][c];
                 }
             }

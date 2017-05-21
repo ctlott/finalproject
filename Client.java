@@ -11,6 +11,8 @@ public class Client extends JPanel implements MouseListener
     public static void main (String[] args) throws IOException {
         Player[] players = new Player[2];
         
+        Displayer.main( makeList() );
+        
         players[0] = new Player(makeList(), 1);
         players[1] = new Player(makeList(), 2);
         
@@ -18,7 +20,7 @@ public class Client extends JPanel implements MouseListener
         Player current = players[0];
         Player other = players[1];
         
-        while( !players[0].guessedCorrectly() && !players[1].guessedCorrectly() ){
+        while( !players[0].guessedRight() && !players[1].guessedRight() ){
             thing = new Turn( current, other.getChosenOne() );
             
             if(current == players[0]){

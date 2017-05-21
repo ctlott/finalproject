@@ -3,4 +3,6 @@ comment0.params=currentplay\ targetPerson
 comment0.target=Turn(Player,\ People)
 comment1.params=
 comment1.target=void\ questionAnswer()
-numComments=2
+comment2.params=
+comment2.target=void\ remove()
+numComments=3

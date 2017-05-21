@@ -13,13 +13,7 @@ public class Question
    
    public Question(People peeps){
        person = peeps;
-       System.out.println(/*1. Graduation Year
-       2. Hair Color
-       3. Shirt Color
-       4. Gender 
-       5. Ethnicity
-       6. Has Glasses
-       7. Guess Who!*/);
+       System.out.println("\n1. Graduation Year\n2. Hair Color\n3. Shirt Color\n4. Gender\n5. Ethnicity\n6. Has Glasses\n7. Guess Who!");
        
        System.out.print("Enter an integer for the attribute you want to guess about from the menu above: ");
        attribute = Keyboard.nextInt();
@@ -57,10 +51,7 @@ public class Question
            return truefalse;
        }
    public boolean guessHairColor(){    
-           System.out.println(/*1. Black
-           2. Brown
-           3. Dirty Blonde
-           3. Bleach Blonde */);
+           System.out.println("\n1. Black\n2. Brown\n3. Dirty Blonde\n4. Bleach Blonde\n");
            System.out.print("Enter an integer for the hair color you want to guess: ");
            choice = Keyboard.nextInt();
            System.out.println();
@@ -71,11 +62,7 @@ public class Question
            return truefalse;
         }
    public boolean guessShirtColor(){       
-           System.out.println(/*1. Red
-           2. Blue
-           3. Black
-           4. Grey
-           5. Pattern*/);
+           System.out.println("\n1. Red\n2. Blue\n3. Black\n4. Grey\n5. Pattern\n");
            System.out.print("Enter an integer for the shirt color you want to guess: ");
            choice = Keyboard.nextInt();
            System.out.println();
