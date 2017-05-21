@@ -15,7 +15,7 @@ import java.util.*;
 import java.io.*;
 import javax.imageio.ImageIO;
 
-public class SwingSandbox extends JPanel implements MouseListener {
+public class Displayer extends JPanel implements MouseListener {
 
     public static void main(People[][] board) throws IOException {
         JFrame frame = new JFrame("Guess Who('s back bitches)");
@@ -28,11 +28,12 @@ public class SwingSandbox extends JPanel implements MouseListener {
                 BufferedImage image= null;
                 for (People[] p: board){
                     for (People pp: p){
-                        try {
-                        image  = ImageIO.read( new File( pp.getFileName() ) );
-                    } catch (IOException e) {
-                    }
-                        g.drawImage(image, pp.getXLocation(), pp.getYLocation(), null);
+                        if(pp.getDisplayMe() == true){ 
+                            try {
+                                image  = ImageIO.read( new File( pp.getFileName() ) );
+                            } catch (IOException e) {}
+                            g.drawImage(image, pp.getXLocation(), pp.getYLocation(), null);
+                        }
                     }
                 }
             }

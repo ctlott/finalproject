@@ -11,12 +11,25 @@ public class Client extends JPanel implements MouseListener
     public static void main (String[] args) throws IOException {
         Player[] players = new Player[2];
         
-        People[][] b = makeList();
+        players[0] = new Player(makeList(), 1);
+        players[1] = new Player(makeList(), 2);
         
-        SwingSandbox.main(b);
+        Turn thing = null;
+        Player current = players[0];
+        Player other = players[1];
         
-        
-        //System.out.println("Player 1! Choose whom you would like Player 2 to guess.");
+        while( !players[0].guessedCorrectly() && !players[1].guessedCorrectly() ){
+            thing = new Turn( current, other.getChosenOne() );
+            
+            if(current == players[0]){
+                current = players[1];
+                other = players[0];
+            }
+            else{
+                current = players[0];
+                other = players[1];
+            }
+        }
         
     }
     
@@ -67,29 +80,29 @@ public class Client extends JPanel implements MouseListener
         int x = (int)e.getLocationOnScreen().getX();
         int y = (int)e.getLocationOnScreen().getY();
     }
-//     
-//     public static void display(People[][] board) throws IOException {
-//         JFrame frame = new JFrame("Test");
-//         JPanel pane = new JPanel(){
-//         protected void displayBoard(Graphics g) throws IOException {
-//             super.paintComponent(g);
-//             for (People[] p: board){
-//                 for (People pp: p){
-//                     try {
-//                         BufferedImage image  = ImageIO.read( new File( pp.getFileName() ) );
-//                     } catch (IOException e) {
-//                     }
-//     
-//                     g.drawImage(image, pp.getXLocation(), pp.getYLocation(), null);
-//                 }
-//             }
-//         }
-//         };
-//         frame.add(pane);
-//         
-//         frame.pack();
-//         frame.setVisible(true);
-//     }
+    
+    //     public static void display(People[][] board) throws IOException {
+    //         JFrame frame = new JFrame("Test");
+    //         JPanel pane = new JPanel(){
+    //         protected void displayBoard(Graphics g) throws IOException {
+    //             super.paintComponent(g);
+    //             for (People[] p: board){
+    //                 for (People pp: p){
+    //                     try {
+    //                         BufferedImage image  = ImageIO.read( new File( pp.getFileName() ) );
+    //                     } catch (IOException e) {
+    //                     }
+    //     
+    //                     g.drawImage(image, pp.getXLocation(), pp.getYLocation(), null);
+    //                 }
+    //             }
+    //         }
+    //         };
+    //         frame.add(pane);
+    //         
+    //         frame.pack();
+    //         frame.setVisible(true);
+    //     }
         
     public void mouseEntered(MouseEvent e){}
     public void mouseExited(MouseEvent e){}

@@ -10,6 +10,7 @@ import javax.imageio.ImageIO;
 public class People extends JPanel 
 {
     private int x, y, gradYear, hairColor, shirtColor, gender, ethnicity, glasses;
+    public boolean displayMe;
     public String name, fileName;
     public BufferedImage image;
     public static int length = 124, width =166;
@@ -37,6 +38,7 @@ public class People extends JPanel
         x = posX;
         y = posY;
         fileName = file;
+        displayMe = true;
         
         image  = ImageIO.read( new File(file) );
         
@@ -100,6 +102,13 @@ public class People extends JPanel
     }
     public int getWidth(){
         return width;
+    }
+    public boolean getDisplayMe(){
+        return displayMe;
+    }
+    
+    public void noDisplay(){
+        displayMe = false;
     }
     
     public String toString(){
