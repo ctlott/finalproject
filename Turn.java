@@ -22,6 +22,10 @@ public class Turn
         currentTarget = this.getCurrentTargetPerson();
         Question newQ = new Question(currentTarget);
     }
+    public boolean questionAnswer(){
+        Question newQ = new Question(currentTarget);
+        return newQ.getBoolean();
+    }
     public void switchPlayer(int currentplayer){
         if (currentplayer == 1)
             currentplayer = 2;

@@ -15,7 +15,8 @@ public class Client extends JPanel implements MouseListener
         
         SwingSandbox.main(b);
         
-        System.out.println("Player 1! Choose whom you would like Player 2 to guess.");
+        
+        //System.out.println("Player 1! Choose whom you would like Player 2 to guess.");
         
     }
     
@@ -49,7 +50,7 @@ public class Client extends JPanel implements MouseListener
         return board;
     }
     
-    private static People loopImages(int x, int y, People[][] board){
+    public static People loopImages(int x, int y, People[][] board){
         for(int i = 0; i < board.length; i++){
             if(board[i][0].getYLocation() >= y && board[i][0].getYLocation() + board[i][0].getLength() <= y){
                 for(int j = 0; j < board[i].length; j++){

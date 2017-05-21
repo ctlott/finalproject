@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=player1\ player2\ guess1\ guess2\ peep
+comment0.target=Turn(Player,\ Player,\ People,\ People,\ People[][])
+comment1.params=
+comment1.target=boolean\ questionAnswer()
+comment2.params=currentplayer
+comment2.target=void\ switchPlayer(int)
+comment3.params=
+comment3.target=People\ getCurrentTargetPerson()
+numComments=4

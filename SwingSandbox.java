@@ -19,9 +19,7 @@ public class SwingSandbox extends JPanel implements MouseListener {
 
     public static void main(People[][] board) throws IOException {
         JFrame frame = new JFrame("Guess Who('s back bitches)");
-        frame.setSize(715, 900);
-
-        BufferedImage image = ImageIO.read(new File("Pics\\Phillip.jpg"));
+        frame.setSize(780, 710);
 
         JPanel pane = new JPanel() {
             @Override
@@ -44,7 +42,7 @@ public class SwingSandbox extends JPanel implements MouseListener {
         frame.add(pane);
         
         //frame.getContentPane().add(test);
-        frame.pack();
+        //frame.pack();
         frame.setVisible(true);
     }
     

@@ -6,7 +6,7 @@ public class Question
    private People person;
    private int attribute;
    private int choice;
-   private boolean returnfinal;
+   public static boolean returnfinal;
    private boolean truefalse;
    Scanner Keyboard = new Scanner(System.in);
    
@@ -122,5 +122,8 @@ public class Question
                 truefalse = false;
            return truefalse;
         }
+   public boolean getBoolean(){
+           return this.returnfinal;
+    }
     }
 
