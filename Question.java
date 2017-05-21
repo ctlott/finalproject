@@ -4,9 +4,10 @@ import java.util.*;
 public class Question
 {
    private People person;
-   private int attribute;
+   public static int attribute;
    private int choice;
    public static boolean returnfinal;
+   public static boolean guessedCorrectlyQuestion = false;
    private boolean truefalse;
    Scanner Keyboard = new Scanner(System.in);
    
@@ -36,8 +37,10 @@ public class Question
             returnfinal = guessEthnicity();     
        else if (attribute == 6)
             returnfinal = guessGlasses();   
-       else if (attribute == 7)
-            returnfinal = guessWho();  
+       else if (attribute == 7){
+            returnfinal = guessWho();
+            this.guessedCorrectlyQuestion = true;
+        }
        else {
             System.out.println("Invalid entry");
             returnfinal = false;
@@ -120,10 +123,14 @@ public class Question
                 truefalse = true;
            else
                 truefalse = false;
+           
            return truefalse;
         }
    public boolean getBoolean(){
            return this.returnfinal;
+    }
+   public boolean getGuessedCorrectly(){
+       return guessedCorrectlyQuestion;
     }
     }
 

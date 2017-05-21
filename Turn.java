@@ -8,35 +8,26 @@
  */
 public class Turn
 {
-    int currentplayer = 0;
-    public People[][] PeopleArray;
+    Player currentplayer;
     People currentTarget;
-    People whoTheyNeedToGuess1;
-    People whoTheyNeedToGuess2;
-    public Turn(Player player1, Player player2, People guess1, People guess2, People[][] peep){
-        PeopleArray = peep;
-        currentplayer = 1;
-        whoTheyNeedToGuess1 = guess1;
-        whoTheyNeedToGuess2 = guess2;
-        System.out.println("Player " + currentplayer + ", it is your turn.");
-        currentTarget = this.getCurrentTargetPerson();
+    public static boolean guessedCorrectlyTurn = false;
+    public Turn( Player currentplay, People targetPerson){
+        currentTarget = targetPerson;
+        currentplayer = currentplay;
+        System.out.println(currentplayer + ", it is your turn!");
+        this.questionAnswer();
+    }
+    public void questionAnswer(){
         Question newQ = new Question(currentTarget);
-    }
-    public boolean questionAnswer(){
-        Question newQ = new Question(currentTarget);
-        return newQ.getBoolean();
-    }
-    public void switchPlayer(int currentplayer){
-        if (currentplayer == 1)
-            currentplayer = 2;
+        if (newQ.attribute == 7){
+            if (newQ.getGuessedCorrectly() == true){
+                currentplayer.setTrue();
+                this.guessedCorrectlyTurn = true;
+            }}
+        if (newQ.getBoolean() == false)
+            System.out.println("The answer to that question is NO");
         else
-            currentplayer = 1;
+            System.out.println("The answer to that question is YES");
     }
-    public People getCurrentTargetPerson(){
-        if (currentplayer == 1)
-            return whoTheyNeedToGuess1;
-        else
-            return whoTheyNeedToGuess2;
-    }
-
+    
 }

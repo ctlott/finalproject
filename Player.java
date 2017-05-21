@@ -10,11 +10,13 @@ public class Player
 {
     public People[][] board;
     private People chosenOne;
+    public static boolean guessedCorrectlyPlayer;
     private int Playernum;
     Scanner Keyboard = new Scanner(System.in);
     
     public Player(People[][] myBoard, int number){
         board = myBoard;
+        guessedCorrectlyPlayer = false;
         System.out.println("Enter the name of a person you want your opponent to guess: ");
         for (int r = 0; r < myBoard.length; r++){
             for (int c = 0; c < myBoard.length; c++){
@@ -34,6 +36,13 @@ public class Player
     public int getPlayerNum(){
         return Playernum;
     }
-        
-    
+    public boolean guessedRight(){
+        return guessedCorrectlyPlayer;
+    }
+    public void setTrue(){
+        guessedCorrectlyPlayer = true;
+    }
+    public String toString(){
+        return (" " + Playernum + " ");
+    }
 }
