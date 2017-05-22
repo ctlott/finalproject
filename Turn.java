@@ -19,7 +19,7 @@ public class Turn
         System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println(currentplayer + ", it is your turn!");
         
-        Displayer.main(currentplayer.getBoard());
+        Displayer.display(currentplayer.getBoard());
         this.questionAnswer();
         if(currentplayer.guessedRight() == false){
             this.remove();

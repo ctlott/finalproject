@@ -1,4 +1,3 @@
-
 public class People
 {
     //creates variables for each person

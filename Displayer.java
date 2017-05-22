@@ -1,25 +1,12 @@
 //imports
-
-import javax.imageio.ImageIO;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.WindowConstants;
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-
 import java.awt.image.*;
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import java.util.*;
 import java.io.*;
 import javax.imageio.ImageIO;
 
-public class Displayer extends JPanel {
-
-    public static void main(People[][] board) throws IOException {
+public class Displayer {
+    public static void display(People[][] board) throws IOException {
         //creates window for frame
         JFrame frame = new JFrame("Guess Who!!");
         //sets the frame size

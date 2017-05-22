@@ -15,7 +15,7 @@ public class Player
         String choosen = Keyboard.next();
         for (int r = 0; r < myBoard.length; r++){
             for (int c = 0; c < myBoard[0].length; c++){
-                if (choosen.equals( myBoard[r][c].getName())){
+                if (choosen.equalsIgnoreCase( myBoard[r][c].getName())){
                     chosenOne = myBoard[r][c];
                 }
             }

@@ -1,24 +1,36 @@
+//imports
 import java.io.*;
 
 public class Client
 {
     public static void main (String[] args) throws IOException {
+        //list that has two players
         Player[] players = new Player[2];
         
-        Displayer.main( makeList() );
+        //display the pics of the class
+        Displayer.display( makeList() );
         
+        //make each new player
         players[0] = new Player(makeList(), 1);
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-        players[1] = new Player(makeList(), 2);
-        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         
+        //lots of \n for no cheating :D
+        players[1] = new Player(makeList(), 2);
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+        
+        //variable to make a new turn object for every turn the players take
         Turn thing = null;
+        
+        //player 1 goes first (sorry player 2)
         Player current = players[0];
         Player other = players[1];
         
+        //repreats while nobody has won yet
         while( !players[0].guessedRight() && !players[1].guessedRight() ){
+            //creates new turn
             thing = new Turn( current, other.getChosenOne() );
             
+            //swaps current and other player
             if(current == players[0]){
                 current = players[1];
                 other = players[0];
@@ -29,14 +41,18 @@ public class Client
             }
         }
         
+        //winning message!
         System.out.println("\nPlayer " + other + " wins!");
         System.out.println("The person Player " + current + " had to guess was " + other.getChosenOne() );
-        
     }
     
-    //name, gradYear, hairColor, shirtColor, gender, ethnicity, glasses, posX, posY
+    /**
+    * makes a new people board to have each person in the class on it
+    * @ return a new people[][] board
+    */
     public static People[][] makeList() throws IOException{
         People[][] board = new People[4][6];
+        //name, fileName, gradYear, hairColor, shirtColor, gender, ethnicity, glasses, posX, posY
         board[0][0] = new People("Phillip", "Pics//Phillip.jpg", 2017, 3, 2, 1, 2, 2, 5, 5);
         board[0][1] = new People("Jack", "Pics//Jack.jpg", 2018, 2, 3, 1, 2, 1, 134, 5);
         board[0][2] = new People("Neha", "Pics//Neha.jpg", 2018, 1, 3, 2, 1, 1, 263, 5);
@@ -63,4 +79,4 @@ public class Client
         board[3][5] = new People("Emile", "Pics//Emile.jpg", 2019, 2, 1, 1, 2, 2, 650, 518);
         return board;
     }
-}
+}//end of class

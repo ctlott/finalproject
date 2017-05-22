@@ -146,7 +146,7 @@ public class Question
            System.out.print("Enter the name you want to guess: ");
            String str = Keyboard.next();
            System.out.println();
-           if ( person.getName().equals(str) )
+           if ( person.getName().equalsIgnoreCase(str) )
                 truefalse = true;
            else
                 truefalse = false;
