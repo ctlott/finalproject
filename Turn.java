@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 /**
  * Write a description of class Game here.
@@ -12,12 +13,15 @@ public class Turn
     People currentTarget;
     public static boolean guessedCorrectlyTurn = false;
     public static Scanner Keyboard = new Scanner(System.in);
-    public Turn( Player currentplay, People targetPerson){
+    public Turn( Player currentplay, People targetPerson) throws IOException{
         currentTarget = targetPerson;
         currentplayer = currentplay;
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         System.out.println(currentplayer + ", it is your turn!");
         
+        Displayer.main(currentplayer.getBoard());
         this.questionAnswer();
+        this.remove();
     }
     public void questionAnswer(){
         Question newQ = new Question(currentTarget);
@@ -35,12 +39,17 @@ public class Turn
         int x = -1;
         int y = -1;
         System.out.println("Enter the x and y location of the people you want to remove.");
-        System.out.println("When you are done removing, enter -1.");
-        while(x != -1){
-            System.out.println("X location: ");
+        System.out.println("When you are done removing, enter 0.");
+        while(x != 0){
+            System.out.print("\nX location: ");
             x = Keyboard.nextInt();
-            System.out.println("Y location: ");
+            System.out.print("Y location: ");
             y = Keyboard.nextInt();
+            
+            if(x != 0 && y != 0){
+                currentplayer.getBoard()[y-1][x-1].noDisplay();
+                System.out.println("Removed " + currentplayer.getBoard()[y-1][x-1].getName());
+            }
         }
     }
 }

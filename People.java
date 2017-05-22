@@ -28,17 +28,17 @@ public class People extends JPanel
     
     public People(String n, String file, int gY, int hC, int sC, int gen, int e, int gla, int posX, int posY) throws IOException {
         //variables
-        name = n;
-        gradYear = gY;
-        hairColor = hC;
-        shirtColor = sC;
-        gender = gen;
-        ethnicity = e;
-        glasses = gla;
-        x = posX;
-        y = posY;
-        fileName = file;
-        displayMe = true;
+        this.name = n;
+        this.gradYear = gY;
+        this.hairColor = hC;
+        this.shirtColor = sC;
+        this.gender = gen;
+        this.ethnicity = e;
+        this.glasses = gla;
+        this.x = posX;
+        this.y = posY;
+        this.fileName = file;
+        this.displayMe = true;
         
         image  = ImageIO.read( new File(file) );
         

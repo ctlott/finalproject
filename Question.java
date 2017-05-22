@@ -106,7 +106,7 @@ public class Question
            System.out.print("Enter the name you want to guess: ");
            String str = Keyboard.next();
            System.out.println();
-           if (person.getName() == str)
+           if ( person.getName().equals(str) )
                 truefalse = true;
            else
                 truefalse = false;

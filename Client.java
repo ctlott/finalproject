@@ -14,7 +14,9 @@ public class Client extends JPanel implements MouseListener
         Displayer.main( makeList() );
         
         players[0] = new Player(makeList(), 1);
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         players[1] = new Player(makeList(), 2);
+        System.out.println("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
         
         Turn thing = null;
         Player current = players[0];
