@@ -13,9 +13,9 @@ public class Question
    
    public Question(People peeps){
        person = peeps;
-       System.out.println("\n1. Graduation Year\n2. Hair Color\n3. Shirt Color\n4. Gender\n5. Ethnicity\n6. Has Glasses\n7. Guess Who!");
+       System.out.println("\n\n1. Graduation Year\n2. Hair Color\n3. Shirt Color\n4. Gender\n5. Ethnicity\n6. Has Glasses\n7. Guess Who!");
        
-       System.out.print("Enter an integer for the attribute you want to guess about from the menu above: ");
+       System.out.print("\nEnter an intenger for an attribute to guess about: ");
        attribute = Keyboard.nextInt();
        System.out.println();
        
@@ -52,7 +52,7 @@ public class Question
            return truefalse;
        }
    public boolean guessHairColor(){    
-           System.out.println("\n1. Black\n2. Brown\n3. Dirty Blonde\n4. Bleach Blonde\n");
+           System.out.println("\n\n1. Black\n2. Brown\n3. Dirty Blonde\n4. Bleach Blonde\n");
            System.out.print("Enter an integer for the hair color you want to guess: ");
            choice = Keyboard.nextInt();
            System.out.println();
