@@ -1,12 +1,6 @@
-import java.awt.image.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
-import java.util.*;
 import java.io.*;
-import javax.imageio.ImageIO;
 
-public class Client extends JPanel
+public class Client
 {
     public static void main (String[] args) throws IOException {
         Player[] players = new Player[2];
@@ -34,6 +28,9 @@ public class Client extends JPanel
                 other = players[1];
             }
         }
+        
+        System.out.println("\nPlayer " + other + " wins!");
+        System.out.println("The person Player " + current + " had to guess was " + other.getChosenOne() );
         
     }
     

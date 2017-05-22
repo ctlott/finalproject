@@ -1,10 +1,4 @@
-import java.awt.image.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
 import java.util.*;
-import java.io.*;
-import javax.imageio.ImageIO;
 
 public class Player
 {

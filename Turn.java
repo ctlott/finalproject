@@ -21,7 +21,9 @@ public class Turn
         
         Displayer.main(currentplayer.getBoard());
         this.questionAnswer();
-        this.remove();
+        if(currentplayer.guessedRight() == false){
+            this.remove();
+        }
     }
     public void questionAnswer(){
         Question newQ = new Question(currentTarget);
@@ -38,7 +40,8 @@ public class Turn
     public void remove(){
         int x = -1;
         int y = -1;
-        System.out.println("Enter the x and y location of the people you want to remove.");
+        System.out.println("\nEnter the x and y location of the people you want to remove.");
+        System.out.println("To reflip someone, enter the location again.");
         System.out.println("When you are done removing, enter 0.");
         while(x != 0){
             System.out.print("\nX location: ");
@@ -47,8 +50,13 @@ public class Turn
             y = Keyboard.nextInt();
             
             if(x != 0 && y != 0){
-                currentplayer.getBoard()[y-1][x-1].noDisplay();
-                System.out.println("Removed " + currentplayer.getBoard()[y-1][x-1].getName());
+                currentplayer.getBoard()[y-1][x-1].flip();
+                if(currentplayer.getBoard()[y-1][x-1].getDisplayMe() == false){
+                    System.out.println("Removed " + currentplayer.getBoard()[y-1][x-1].getName());
+                }
+                else{
+                    System.out.println("Flipped " + currentplayer.getBoard()[y-1][x-1].getName() + " back over");
+                }
             }
         }
     }

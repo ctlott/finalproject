@@ -92,8 +92,13 @@ public class People
     /**
      * sets the displayMe variable to be false
      */
-    public void noDisplay(){
-        displayMe = false;
+    public void flip(){
+        if(displayMe == false){
+            displayMe = true;
+        }
+        else{
+            displayMe = false;
+        }
     }
     /**
      * returns the name of this person
