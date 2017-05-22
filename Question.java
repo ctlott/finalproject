@@ -33,7 +33,8 @@ public class Question
             returnfinal = guessGlasses();   
        else if (attribute == 7){
             returnfinal = guessWho();
-            this.guessedCorrectlyQuestion = true;
+            if (returnfinal == true)
+                this.guessedCorrectlyQuestion = true;
         }
        else {
             System.out.println("Invalid entry");
