@@ -3,5 +3,5 @@ comment0.params=args
 comment0.target=void\ main(java.lang.String[])
 comment1.params=
 comment1.target=People[][]\ makeList()
-comment1.text=\r\n\ makes\ a\ new\ people\ board\ to\ have\ each\ person\ in\ the\ class\ on\ it\r\n\ @\ return\ a\ new\ people[][]\ board\r\n
+comment1.text=\n\ makes\ a\ new\ people\ board\ to\ have\ each\ person\ in\ the\ class\ on\ it\n\ @\ return\ a\ new\ people[][]\ board\n
 numComments=2

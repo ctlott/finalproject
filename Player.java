@@ -27,6 +27,18 @@ public class Player
                 }
             }
         }
+        while(chosenOne == null){
+            System.out.print("\nYou naugty naughty prick. Enter a legit person: ");
+            choosen = Keyboard.next();
+            for (int r = 0; r < myBoard.length; r++){
+                for (int c = 0; c < myBoard[0].length; c++){
+                    if (choosen.equalsIgnoreCase( myBoard[r][c].getName())){
+                        chosenOne = myBoard[r][c];
+                    }
+                }
+            }
+        }
+        
         Playernum = number;
       
     }
