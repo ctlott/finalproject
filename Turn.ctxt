@@ -1,11 +1,11 @@
 #BlueJ class context
 comment0.params=currentplay\ targetPerson
 comment0.target=Turn(Player,\ People)
-comment0.text=\n\ constructor\n\ @param\ the\ current\ player,\ and\ the\ target\ person\ who\ the\ player\ needs\ to\ guess\n
+comment0.text=\r\n\ constructor\r\n\ @param\ the\ current\ player,\ and\ the\ target\ person\ who\ the\ player\ needs\ to\ guess\r\n
 comment1.params=
 comment1.target=void\ questionAnswer()
-comment1.text=\n\ lets\ the\ user\ know\ whether\ they\ guessed\ correctly\ YES\ or\ NO\n
+comment1.text=\r\n\ lets\ the\ user\ know\ whether\ they\ guessed\ correctly\ YES\ or\ NO\r\n
 comment2.params=
 comment2.target=void\ remove()
-comment2.text=\n\ removes\ the\ people\ from\ the\ display\ board\ or\ makes\ them\ re-display\n
+comment2.text=\r\n\ removes\ the\ people\ from\ the\ display\ board\ or\ makes\ them\ re-display\r\n
 numComments=3
