@@ -19,7 +19,7 @@ public class Player
         board = myBoard;
         guessedCorrectlyPlayer = false;
         System.out.print("Enter the name of a person you want your opponent to guess: ");
-        String choosen = Keyboard.next();
+        String choosen = Keyboard.nextLine();
         for (int r = 0; r < myBoard.length; r++){
             for (int c = 0; c < myBoard[0].length; c++){
                 if (choosen.equalsIgnoreCase( myBoard[r][c].getName())){
@@ -28,8 +28,8 @@ public class Player
             }
         }
         while(chosenOne == null){
-            System.out.print("\nYou naugty naughty prick. Enter a legit person: ");
-            choosen = Keyboard.next();
+            System.out.print("\nYou naughty naughty prick. Enter a legit person: ");
+            choosen = Keyboard.nextLine();
             for (int r = 0; r < myBoard.length; r++){
                 for (int c = 0; c < myBoard[0].length; c++){
                     if (choosen.equalsIgnoreCase( myBoard[r][c].getName())){
